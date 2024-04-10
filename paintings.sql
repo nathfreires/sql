@@ -23,7 +23,7 @@ select count(1)
 		  having count(1) = 7) x;
   
   
--- 16) Which museum has the most no of most popular painting style?
+-- Which museum has the most no of most popular painting style?
 	with pop_style as 
 			(select style
 			,rank() over(order by count(1) desc) as rnk
